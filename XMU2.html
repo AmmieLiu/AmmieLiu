@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">
+	<title>厦门大学</title>
+	<style type="text/css">	
+	body{
+		margin: 0;
+		background-image:url(images/header.png);
+		background-repeat:repeat-x;
+	}
+	#wrapper{
+		margin: 0px;
+		width: 100%;
+		height: 960px;
+	}
+	#header{
+		width: 100%;
+		height: 492px;
+	}
+	#header-inner{
+		background: url(images/header-logo.png);
+		background-repeat: no-repeat;
+		background-position: 480px -235px;
+		margin: 0 auto 0 auto;
+		width: 940px;
+		height: 126px;
+	}
+	#header-brand{
+		margin: 20px auto 0px auto;
+		width: 285px;
+		height: 88px;
+	}
+	#nav{
+		margin: 0px auto 0 auto;
+		width: 940px;
+		height: 36px;
+	}
+	.active{
+    	width: 28px;
+    	height: 38px;	
+    }
+    .avtive1{
+    	width: 56px;
+    	height: 38px;
+    	border:1px solid;
+    }
+	.bottom{
+		background-image:url(images/navbar.png);
+        margin: 0 auto;
+		width: 1300px;
+		height: 3px;
+    }
+    .box{
+    	margin: 0 auto 0 auto;
+    	width: 940px;
+		height: 360px;
+    }
+    #box1{
+        margin: 0 auto;
+        width: 940px;
+        height: 325px;
+        border-bottom-color:rgb(250, 202, 82);
+        border-bottom-style: solid;
+        border-bottom-width: 2px; 
+    }
+    #content1{
+        width: 300px;
+        height: 335px;
+        float: left;
+    }
+    #content2{
+        margin-left: 20px;
+        width: 460px;
+        height: 318px;
+        display: block;
+        float: left;
+    }
+    #content3{
+        margin: 0 0 0 20px;
+        width: 140px;
+        height: 337px;
+        display: block;
+        float: left;
+    }
+    .title{
+        margin:10px 0 5px 0;
+        border-bottom-color:rgb(250, 202, 82);
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        color: rgb(51, 51, 51);
+        height: 20px;
+    }
+    .pull-left{
+        width: 80px;
+        height: 20px;
+        float: left;
+    }
+    .pull-right{
+        width: 14px;
+        height: 20px;
+        float: right;
+    }
+    .singnal{
+        float: left;
+        background: url(images/glyphicons-halflings_1.png);
+        margin-top: 1px;
+        margin-right: 10px;
+        width:14px;
+        height:14px;
+    }
+    .singnal2{
+        float: left;
+        background: url(images/glyphicons-halflings_3.png);
+        margin-top: 5px;
+        margin-right: 10px;
+        width:14px;
+        height:14px;
+    }
+    .content1-list{
+        width:300px;
+        height:280px;
+    }
+    #content2-list{
+        width:460px;
+        height:273px;
+    }
+
+    #content3-list{
+        margin-top:  -3px;
+        margin-bottom: 10px;
+        padding:7px 10px;
+        background-color: rgb(239, 240, 245);
+        width:118px;
+        height:276px;
+        border-color: rgb(230, 230, 230);
+    }
+    #news1{
+        padding-bottom: 4px;
+        width: 460px;
+        height: 120px;
+    }
+    .news1-right{
+        float:right;
+        width: 186px;
+        height: 115px;
+       
+    }
+    .news1-left{
+        float:left;
+        margin-left: 10px;
+        padding-right: 5px;
+        width: 255px;
+        height: 120px;
+    }
+    #news2{
+        padding-bottom: 5px;
+        width: 460px;
+        height: 140px;  
+    }
+    .news2-left{
+        background-color: red;
+        float:left;
+        width: 186px;
+        height: 122px;
+    }
+    .news2-right{
+        float:right;
+        margin-left: 10px;
+        padding-right: 5px;
+        width: 255px;
+        height: 140px;
+    }
+    #footer1{
+        margin-top: 3px;
+        padding:20px 0px 0 0px;
+        background-color: #066baf;
+        height: 80px;
+    }
+    #footer1-1{
+        margin:0 auto;
+        width: 940px;
+        height: 80px;
+    }
+    #footer1-1-1{
+        float: left;
+        background:url(images/footer-logo.png);
+        width:50px;
+        height: 50px;
+    }
+    #footer1-1-2{
+        color:#FFFFFF;
+        float: left;
+        width:330px;
+        height: 80px;
+        font-family: 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: bolder;
+    }
+    .footer1-1-3{
+        color:#FFFFFF;
+        float: right;
+        width:140px;
+        height: 60px;
+        font-family: 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+    }
+    #footer2{
+        padding:10px 20px 0 20px;
+        background-color: rgb(10, 63, 118);
+        height: 30px;
+    }
+    #footer2-1{
+        width:940px;
+        height:30px;
+        margin:0 auto;
+    }
+
+    ul.one{
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	font-weight: bolder;
+        font-family: 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    }
+    li.one{
+    	display: inline-block;
+    	padding: 0 17px;
+    	font-size: 14px;
+    	line-height: 38px;
+    }
+    a.one{
+        font-family: 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    a.one:link{
+        text-decoration:none; 
+    }
+    a.one:visited{
+        color: #FFFFFF;
+    }
+    a.one:hover{
+    	color:#FF8C00;
+    }
+    ul.two{
+        padding-left:4px;
+        margin-top: 10px;
+    }
+    li.two{
+        list-style-type: none;
+        margin: 0 15px 6px 0;
+        line-height:20px;         
+    }
+    a.two{
+        width: auto;
+        height:auto;
+        font-family: 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 12px;     
+        color:#000000;
+        text-decoration: none;
+    }
+    ul.three{
+        width: 118px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+    li.three{
+        width: 118px;
+        height:23px;
+        list-style-type: none;
+        display:inline-block;
+        margin: 0 15px 0 0;
+        line-height:20px;       
+    }
+    a.three{
+        font-family: 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+    }
+    a.three:link{
+        text-decoration:none; 
+    }
+    a.three:visited{
+        color: #FFFFFF;
+    }
+
+    span.one{
+        font-family:'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    h{
+        font-family:'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    p.one{
+        font-family:'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+    }
+    p.two{
+
+        margin:0;
+        width: 331px;
+        height: 20px;
+
+    }
+
+
+
+
+	</style>
+</head>
+<body>
+    <div id="wrapper">
+    	<div id="header">
+    		<div id="header-inner">
+    			<div id="brand"><img src="images\header-brand-new.png">
+    			</div>
+    			<div id="nav">
+    				<ul class="one">
+    					<li class="one" class="active">
+    						<a class="one" href="http://www.xmu.edu.cn/">
+    							主页
+    						</a>
+    					</li>
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/about/xuexiaojianjie">
+        		        		厦大概览
+        		            </a> 
+        		        </li> 
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/about/xuexiaojianjie">
+        		        		机构设置
+        		            </a> 
+        		        </li>  
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/">
+        		        		人才培养
+        		            </a> 
+        		        </li>  
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/research/keyanyuansuo">
+        		        		学术科研
+        		            </a> 
+        		        </li> 
+        		         <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/" >
+        		        		社会服务
+        		            </a> 
+        		        </li> 
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/">
+        		        		大学文化
+        		            </a> 
+        		        </li>  
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/" >
+        		        		合作交流
+        		            </a> 
+        		        </li>  
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/about/jigou#guanlifuwubumen2">
+        		        		招生就业
+        		            </a> 
+        		        </li>  
+        		        <li class="one" class="active1">
+        		        	<a class="one" href="http://www.xmu.edu.cn/en/">
+        		        		English
+        		            </a> 
+        		        </li>          			   
+    				</ul>
+    	        </div>
+    		</div>
+    		<div class="bottom">
+            </div>
+            <div class="box">
+            	<marquee><img src="images\panshu.jpg"><img src="images\malaixiya2.jpg"><img src="E:\XMU\images\gedebahe.jpg"><img src="images\leiqiu.jpg"></marquee></tb>
+            </div>
+    	</div>
+        <div id="box1">
+            <div id="content1">
+                <div class="title">
+                    <span class="one" class="pull-left">
+                        <div class="singnal"> 
+                        </div> 
+                        厦大新闻 
+                    </span>
+                    <div class="pull-right">
+                        <a href="http://news.xmu.edu.cn/">
+                        <img src="images/glyphicons-halflings_2.png">
+                        </a>
+                    </div>
+                </div>
+                    <div class="content1-list">   
+                        <ul class="two">
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/3a/info156218.htm"
+                                    title="我校将承办第九届全球孔子学院大会" target="_blank"> >>我校将承办第九届全球孔子学院大会
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/38/info156216.htm"
+                                    title="厦大老年大学召开校务委员会会议" target="_blank"> >>厦大老年大学召开校务委员会会议
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/2f/info156207.htm"
+                                    title="张彦书记主持召开党委部门联席会" target="_blank"> >>张彦书记主持召开党委部门联席会
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/29/info156201.htm"
+                                    title="机关干部讲坛开讲" target="_blank"> >>机关干部讲坛开讲
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/30/info156208.htm"
+                                    title="[我最喜爱的十位老师]孙丽影：初心不改的教师" target="_blank"> >>[我最喜爱的十位老师]孙丽影：初心不改的教师
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/2c/info156204.htm"
+                                    title="近海海洋环境科学国家重点实验室张锐副教..." target="_blank"> >>近海海洋环境科学国家重点实验室张锐副教...
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/2f/info156207.htm"
+                                    title="我校10种教材入选第二批“十二五”规划教材" target="_blank"> >>我校10种教材入选第二批“十二五”规划教材
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/2f/info156207.htm"
+                                    title="病毒性肝炎防治研究发展战略海峡两岸专家..." target="_blank"> >>病毒性肝炎防治研究发展战略海峡两岸专家...
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/2f/info156207.htm"
+                                    title="秦大河院士携专家团队来我校解读全球气候..." target="_blank"> >>秦大河院士携专家团队来我校解读全球气候...
+                                </a>
+                            </li>
+                            <li class="two">
+                                <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/62/2f/info156207.htm"
+                                    title="《光明日报》头版：“厦大学派”初现" target="_blank"> >>《光明日报》头版：“厦大学派”初现
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+            </div>
+            <div id="content2">
+                <div class="title">
+                    <span class="one" class="pull-left"> 
+                        <div class="singnal"> 
+                        </div>
+                        焦点要闻
+                    </span>
+                    <div class="pull-right">
+                        <a href="http://news.xmu.edu.cn/s/13/t/542/p/1/c/194/list.htm">
+                        <img src="images/glyphicons-halflings_2.png">
+                        </a>
+                    </div>  
+                </div>
+                <div id="content2-list">
+                    <div id="news1">
+                        <div class="news1-left">
+                            <h>我校与中国建设银行续签合作协议
+                            </h>
+                            <p class="one">  10月16日，厦门大学月中国建设银行战略合作签约仪式在颂恩楼215会议室隆重举行。这标志着双方在互信互惠基础上的合作正在不断深化...
+                            </p>
+                            <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/5b/c9/info154569.htm">[详细]
+                            </a>
+                        </div>
+                        <div class="news1-right">
+                            <img src="images\e9abd117-3514-44cd-b6ad-01e58c3e60f1.jpg" width="186"  height="115">
+                        </div>   
+                    </div>
+                    <div id="news2">
+                        <div class="news2-left">
+                            <img src="images\15a29b45-2b2c-4fc5-8165-7443ac923059.jpg" width="186"  height="122">
+                        </div>
+                        <div class="news2-right">
+                            <h>吹皱人文社科的一池春水——《厦门大学哲学社会科学烦人计划（2011-2021）成效初显
+                            </h>
+                            <p class="one">  现代化的实验室，为促进我校哲学社会科学研究与国际接轨及研究方法的转变提供了重要支撑和保障。2012年12月15日...
+                            </p>
+                            <a class="two" href="http://news.xmu.edu.cn/s/13/t/542/5b/c9/info154569.htm">[详细]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content3">
+                <div class="title">
+                    <span class="one" class="pull-left">
+                        <div class="singnal"> 
+                        </div>  
+                        快速链接
+                    </span>
+                </div>
+                <div id="content3-list">
+                    <ul class="three">
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://e.weibo.com/xmunews">官方微博
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://xmu.yiban.cn/">易班厦大
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://123.xmu.edu.cn/">厦大网址导航
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://lib.xmu.edu.cn/">数字图书馆
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://alumni.xmu.edu.cn/">校友服务
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://edf.xmu.edu.cn/">教育基金会
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://jgxy.xmu.edu.cn/">嘉庚学院
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://liuxue.xmu.edu.cn/">国际学院
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://www.cnconfucius.com/">汉推南方基地
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://wszg.xmu.edu.cn/">网上展馆
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://gk.xmu.edu.cn/">信息公开
+                                </a>
+                            </span>
+                        </li>
+                        <li class="three">
+                            <span>
+                                <div class="singnal2">
+                                </div>
+                                <a class="two" href="http://rsc.xmu.edu.cn/s/137/t/722/p/1/c/6467/d/6557/list.htm">招聘信息
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    	</div>
+        <div id="footer1">
+            <div id="footer1-1">
+                <div id="footer1-1-1">
+                </div>
+                <div id="footer1-1-2">
+                    <p class="two" >厦门大学</p>
+                    <p class="two">厦大总机：0592-2180000 闽ICP备05005471号</p>
+                    <p class="two">地址：福建省厦门市思明区思明南路422号 邮政编码：361005</p>
+                </div>
+                <div class="footer1-1-3">
+                    <a class="three" href="http://ixiada.xmu.edu.cn">爱厦大
+                    </a> |
+                    <a class="three" href="mailto:www@xmu.edu.cn" ><font color="#FFFFFF">反馈</font>
+                    </a> |
+                    <a class="three" href="http://www2012.xmu.edu.cn/">旧版主页
+                    </a>
+                </div>
+            </div>
+            <div id="footer2">
+                <div id="footer2-1">
+                    <div class="footer1-1-3">
+                        <p class="two" >2013厦门大学 版权仅有
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	
+</body>
+</html>
