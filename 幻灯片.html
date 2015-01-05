@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title="幻灯片"> </title>
+    <style type="text/css">
+
+    .orbit-slide{
+    	width:940px;
+    	height:360px;
+    	border:1px solid;
+    }
+    /*.orbit-hide{
+        position:relative;
+        top:-30px;
+        margin:auto;
+        width:180px;
+        height:12px;
+        border:1px solid;
+    }*/
+    #one{
+        margin:0;
+        padding:0;
+    }
+    #circle{
+        position:relative;
+        top:-30px;
+        margin:auto;
+        width:180px;
+        height:12px;
+        list-style-type: none;
+    }
+    li.circle{
+        height:10px;
+        width:10px;
+        border-radius: 50%;
+        background:#FFFFFF; 
+        display: inline-block;  
+        z-index: 1; 
+    }
+
+    /*li.circle:hover{
+        background:#FF8C00;
+    }*/
+       /* margin:0 ;
+        padding:0;
+        height:12px;
+        border:1px solid;
+        list-style-type: circle;
+    }*/
+
+
+    </style>
+</head>
+<body onload="autotabstart()">
+	<div class='orbit-slide' onmouseover="autotabstop()" onmouseout="autotabstart()">
+        <ul id="one">
+            <li>
+                <a href="#" title="第九届孔子学院大会在厦门大学建南大会堂圆满闭幕"><img src="kongzixueyuanbimu.jpg"> </a>
+            </li>
+            <li style='display:none'>
+                <a href="#" title="厦门大学附属医院2015年高层次临床医学人才招聘计划"> <img src="zhaopin-yiyuan.jpg"></a>  
+            </li>
+            <li style='display:none'>
+                <a href="#" title="中国科学院院士、筑梦生物海洋学家焦念志"><img src="haiyangguozhong.jpg"></a>   
+            </li>
+            <li style='display:none'>
+                <a href="#" title="我校牵头的两个协同创新中心入选国家2011计划"><img src="2011jihua.jpg"></a>                
+            </li>
+            <li style='display:none'>
+                <a href="#" title="厦门大学IGM团队连续第四年斩获国际一出啊工程及其涉及竞赛世界锦标赛金奖"><img src="igem1.jpg"></a>                
+            </li>
+            <li style='display:none'>
+                <a href="#" title="厦门大学附属医院2015年高层次临床医学人才招聘计划"><img src="zhaopin-yiyuan.jpg"></a>                
+            </li>
+            <li style='display:none'>
+                <a href="#" title="厦门大学附属医院2015年高层次临床医学人才招聘计划"><img src="zhaopin-yiyuan.jpg"></a>
+            </li>
+       
+        </ul>
+         
+            <ul id="circle">
+                <li class="circle" onclick=show(0)></li>
+                <li class="circle" onclick=show(1)></li>
+                <li class="circle" onclick=show(2)></li>
+                <li class="circle" onclick=show(3)></li>
+                <li class="circle" onclick=show(4)></li>
+                <li class="circle" onclick=show(5)></li>
+                <li class="circle" onclick=show(6)></li>
+
+            </ul>
+
+            
+    
+	</div>
+
+</body>
+    <script type="text/javascript">
+    var pic=document.getElementById('one').getElementsByTagName('li'),index=1;
+    var start;
+    var button=document.getElementById('circle').getElementsByTagName('li');
+        function show(i){
+            for(var j=0;j<pic.length;j++){
+                pic[j].style.display="none";
+                button[j].style.background="#FFFFFF";
+            }
+          pic[i].style.display="block";//显示当前图片
+          button[i].style.background="#FF8C00";//改变原点颜色
+        }
+    function move(){
+        if (index==pic.length){
+            index=1;}
+    
+            else{index++;}
+            show(index-1);       
+    }
+    function autotabstart(){
+        start=setInterval(
+            function(){
+                move();
+            },3000
+            );
+    }
+    function autotabstop(){
+        clearInterval(start);
+    }
+
+
+    </script>
+</html>

@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯片效果</title>
+	<link rel="stylesheet" href="huandengpian.js">
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.navigation{
+		margin: 0 auto 10px;
+		width: 340px;
+		border-top: 2px solid #000;
+		border-bottom: 1px solid #d6d6d6;
+		height: 37px;
+	}
+	.navigation li
+	{
+		float: left;
+		line-height: 37px;
+		text-align: center;
+		border-right: 1px solid #d6d6d6;
+		width: 67px;
+		background-color: #f5f5f5;
+	}
+	.navigation ol
+	{
+		list-style: none;
+	}
+	.content ul
+	{
+		list-style: none;
+	}
+
+
+
+	.navigation li:hover,.navigation li.selected
+	{
+		background-color: #fff;
+	}
+	.navigation a{
+		text-decoration: none;
+		color: #646464;
+		font-family: "Microsoft YaHei", "微软雅黑","黑体";
+		font-size: 16px;
+	}
+	.navigation a:hover{
+		color: #000;
+	}
+	.content{
+		margin: 0 auto;
+		width: 338px;
+		position: relative;
+	}
+	#Blk01_Focus_Arr a:hover{
+		display: block;
+	}
+	.scrArrAbsLeft{
+		background:url(images/news_arr_l_h.png) no-repeat 0 0;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		height: 41px;
+		width: 31px;
+	}
+	.scrArrAbsRight{
+		background: url(images/news_arr_r.png) no-repeat 0 0;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		height: 41px;
+		width: 31px;
+	}
+
+	#Blk01_Focus_Cont li{
+		display: none;
+	}
+	#Blk01_Focus_Cont li.show{
+		display: block;
+	}
+	.clear{
+		clear: both;
+	}
+	</style>
+
+</head>
+<body onload="autoTabStart()">
+	<div>
+		<div class="navigation" onmouseover="autoTapStop()">
+			<ol id="Blk01_Focus_nav">
+				<li class="selected" onmouseover="display(0)"><a href="http://photo.sina.com.cn/">聚焦</a></li>
+				<li onmouseover="display(1)"><a href="http://photo.sina.com.cn/">热点</a></li>
+				<li onmouseover="display(2)"><a href="http://photo.sina.com.cn/">独家</a></li>
+				<li onmouseover="display(3)"><a href="http://photo.sina.com.cn/">奇趣</a></li>
+				<li onmouseover="display(4)"><a href="http://photo.sina.com.cn/">军事</a></li>
+			</ol>
+		    <div class="clear"></div>
+		</div>
+		<div class="content" onmouseout="hiddenAndStart()" onmouseover="showAndStop()">
+			<div id="Blk01_Focus_Arr" style="display:none">
+				<a class="scrArrAbsLeft" href="javascript:void(0)" onclick="move(false)"></a>
+				<a class="scrArrAbsRight" href="javascript:void(0)" onclick="move(true)"></a>
+				<div class="clear"></div>
+			</div>
+			<ul id="Blk01_Focus_Cont">
+				<li class="show"><a href="http://slide.news.sina.com.cn/c/slide_1_2841_77881.html"><img src="images/news.jpg" alt="news"></a></li>
+				<li><a href="http://slide.news.sina.com.cn/s/slide_1_2841_77857.html"><img src="E:\XMU\images\2011jihua.jpg"></a></li>
+				<li><a href="http://slide.news.sina.com.cn/s/slide_1_59438_77838.html"><img src="images/only.jpg" alt="only" ></a></li>
+				<li><a href="http://photo.sina.com.cn/#dir"><img src="images/world.jpg" alt="world"></a></li>
+				<li><a href="http://slide.mil.news.sina.com.cn/k/slide_8_62085_33151.html" ><img src="images/army.jpg" alt="army"></a></li>
+			</ul>
+		</div>	
+	</div>
+	<script>
+	var cont = document.getElementById('Blk01_Focus_Cont').getElementsByTagName('li'),//neirong
+	    nav = document.getElementById('Blk01_Focus_nav').getElementsByTagName('li'),//导航
+	    arrWrap = document.getElementById('Blk01_Focus_Arr'),//jiantou 
+	index, focusTimeHandler;
+
+	var getCurIndex = function(){
+		for(var i = 0; i < nav.length; i++){
+			if(nav[i].className.indexOf('selected')!=-1)
+				return i;
+		}
+	}
+	var move = function(flag){
+		index = getCurIndex();
+		if (flag){
+			index++;
+			if(index >= cont.length)
+				index = 0;
+		}
+		else {
+			index--;
+			if(index < 0)
+				index = cont.length-1;
+		}
+		display(index);
+	}
+	var display = function(index){	
+		for(var i=0; i<cont.length; i++){
+    		cont[i].className = '';
+    		nav[i].className = '';
+    	}
+    	cont[index].className='show';
+    	nav[index].className='selected';
+    }
+    var autoTabStart = function()
+    {
+    	focusTimeHandler = setInterval(function()
+    		{move(true);},1000);
+    }
+    var autoTapStop = function(){
+    	clearInterval(focusTimeHandler);
+    }
+    var showOrHidden = function(flag) {
+        flag ? arrWrap.style.display = 'block' : arrWrap.style.display = 'none';             
+    }
+    var showAndStop = function(){
+    	showOrHidden(true);
+    	autoTapStop();
+    }
+    var hiddenAndStart = function(){
+    	showOrHidden(false);
+    	autoTabStart();
+    }
+</script>
+</body>
+</html>
